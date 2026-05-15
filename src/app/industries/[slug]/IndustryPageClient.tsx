@@ -367,21 +367,21 @@ function FAQSection({ slug }: { slug: string }) {
   };
 
   return (
-    <section className="py-24 bg-background-secondary">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-28 bg-background-secondary">
+      <div className="max-w-4xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="text-accent text-sm font-medium tracking-wider uppercase">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-medium tracking-wider uppercase mb-4">
             Expert Answers
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground-primary mt-4 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground-primary mb-6">
             {faqTitles[slug] || "Frequently Asked Questions"}
           </h2>
-          <p className="text-foreground-secondary max-w-2xl mx-auto">
+          <p className="text-foreground-secondary text-lg leading-relaxed max-w-2xl mx-auto">
             Everything you need to know about professional website design for your industry across the USA.
           </p>
         </motion.div>
@@ -394,7 +394,7 @@ function FAQSection({ slug }: { slug: string }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              className="bg-background-primary border border-border rounded-xl overflow-hidden"
+              className="bg-background-primary/50 border border-border/40 rounded-xl overflow-hidden hover:border-accent/30 transition-colors duration-300"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
@@ -458,28 +458,27 @@ export function IndustryPageClient({ industry, pricing, slug }: IndustryPageClie
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div>
         {/* HERO SECTION */}
-        <section className="py-24 bg-background-primary relative overflow-hidden">
+        <section className="py-28 bg-background-primary relative overflow-hidden">
           <div className="absolute inset-0">
-            <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full blur-[120px]" style={{ backgroundColor: `${industry.accentColor}20` }} />
+            <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] rounded-full blur-[150px]" style={{ backgroundColor: `${industry.accentColor}15` }} />
           </div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-center mb-12">
-              <span className="inline-block px-4 py-2 rounded-full text-sm font-medium mb-6" style={{ backgroundColor: `${industry.accentColor}15`, color: industry.accentColor }}>
+          <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+              <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium mb-8" style={{ backgroundColor: `${industry.accentColor}15`, color: industry.accentColor }}>
                 {content.heroBadge}
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-foreground-primary leading-tight">
+              <h1 className="text-5xl md:text-6xl font-bold mb-8 text-foreground-primary leading-tight">
                 {content.heroTitle[0]}
                 <br />
                 <span className="text-gradient">{content.heroTitle[1]}</span>
               </h1>
-              <p className="text-foreground-secondary max-w-3xl mx-auto text-lg mb-6 leading-relaxed">
+              <p className="text-xl text-foreground-secondary leading-relaxed mb-12 max-w-2xl mx-auto">
                 {content.heroSubtitle}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <div className="flex flex-col sm:flex-row gap-5 justify-center mb-10">
                 <Link href="/contact">
-                  <Button variant="primary" size="lg" className="group" style={{ backgroundColor: industry.accentColor }}>
-                    Get Your Custom Quote
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <Button variant="primary" size="lg" style={{ backgroundColor: industry.accentColor }}>
+                    Get Your Custom Quote <ArrowRight className="w-5 h-5 ml-2" />
                   </Button>
                 </Link>
                 <Link href="/growth-audit">
@@ -494,14 +493,14 @@ export function IndustryPageClient({ industry, pricing, slug }: IndustryPageClie
         </section>
 
         {/* CITIES WE SERVE */}
-        <section className="py-8 bg-background-secondary border-y border-border">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p className="text-center text-foreground-tertiary text-sm mb-4">
+        <section className="py-10 bg-background-secondary border-y border-border">
+          <div className="max-w-4xl mx-auto px-6">
+            <p className="text-center text-foreground-tertiary text-sm mb-5">
               {content.citiesLabel}
             </p>
             <div className="flex flex-wrap justify-center gap-2">
               {usCities.map((city) => (
-                <span key={city} className="px-3 py-1 bg-background-primary border border-border rounded-full text-xs text-foreground-secondary">
+                <span key={city} className="px-3 py-1.5 bg-background-primary border border-border rounded-full text-xs text-foreground-secondary">
                   {city}
                 </span>
               ))}
@@ -510,16 +509,16 @@ export function IndustryPageClient({ industry, pricing, slug }: IndustryPageClie
         </section>
 
         {/* PROBLEMS */}
-        <section className="py-24 bg-background-primary">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-              <span className="text-accent text-sm font-medium tracking-wider uppercase">
+        <section className="py-28 bg-background-primary">
+          <div className="max-w-5xl mx-auto px-6">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-medium tracking-wider uppercase mb-4">
                 The Problem
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground-primary mt-4 mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground-primary mb-6">
                 Why Businesses Like Yours Are Losing Clients
               </h2>
-              <p className="text-foreground-secondary max-w-3xl mx-auto">
+              <p className="text-foreground-secondary text-lg leading-relaxed max-w-2xl mx-auto">
                 Every day you wait is a client lost to competitors with better websites. Here's what we see across the USA.
               </p>
             </motion.div>
@@ -528,7 +527,7 @@ export function IndustryPageClient({ industry, pricing, slug }: IndustryPageClie
               {content.problems.map((item, index) => (
                 <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                            className="bg-background-secondary border border-border rounded-2xl p-8">
+                            className="bg-background-secondary/50 border border-border/40 rounded-2xl p-8 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)] transition-all duration-300">
                   <div className="flex items-start gap-4 mb-4">
                     <div className="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center flex-shrink-0">
                       <Shield className="w-6 h-6 text-red-500" />
@@ -548,16 +547,16 @@ export function IndustryPageClient({ industry, pricing, slug }: IndustryPageClie
         </section>
 
         {/* OUR SOLUTION / BENEFITS */}
-        <section className="py-24 bg-background-secondary">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-              <span className="text-accent text-sm font-medium tracking-wider uppercase">
+        <section className="py-28 bg-background-secondary">
+          <div className="max-w-6xl mx-auto px-6">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-medium tracking-wider uppercase mb-4">
                 Our Solution
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground-primary mt-4 mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground-primary mb-6">
                 How 911MAKERS Helps Your Industry Win More Clients
               </h2>
-              <p className="text-foreground-secondary max-w-3xl mx-auto">
+              <p className="text-foreground-secondary text-lg leading-relaxed max-w-2xl mx-auto">
                 We don't just build websites. We create digital growth engines that help businesses across America attract more clients and save time.
               </p>
             </motion.div>
@@ -566,7 +565,7 @@ export function IndustryPageClient({ industry, pricing, slug }: IndustryPageClie
               {content.benefits.map((item, index) => (
                 <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                            className="bg-background-primary border border-border/60 rounded-2xl p-8 text-center hover:border-accent/80 hover:shadow-[0_8px_30px_rgba(255,215,0,0.06)] hover:-translate-y-1 transition-all duration-300">
+                            className="bg-background-primary/50 border border-border/40 rounded-2xl p-8 text-center hover:border-accent/80 hover:shadow-[0_20px_40px_rgba(255,215,0,0.08)] hover:-translate-y-1 transition-all duration-300">
                   <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-6">
                     <span style={{ color: industry.accentColor }}><item.icon className="w-8 h-8" /></span>
                   </div>
@@ -582,16 +581,16 @@ export function IndustryPageClient({ industry, pricing, slug }: IndustryPageClie
         </section>
 
         {/* DETAILED FEATURES */}
-        <section className="py-24 bg-background-primary">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-              <span className="text-accent text-sm font-medium tracking-wider uppercase">
+        <section className="py-28 bg-background-primary">
+          <div className="max-w-5xl mx-auto px-6">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-medium tracking-wider uppercase mb-4">
                 Everything Included
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground-primary mt-4 mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground-primary mb-6">
                 Professional Features Built for Your Industry
               </h2>
-              <p className="text-foreground-secondary max-w-3xl mx-auto">
+              <p className="text-foreground-secondary text-lg leading-relaxed max-w-2xl mx-auto">
                 Every feature designed to help you attract more clients, save time, and grow your business.
               </p>
             </motion.div>
@@ -600,7 +599,7 @@ export function IndustryPageClient({ industry, pricing, slug }: IndustryPageClie
               {content.features.map((feature, index) => (
                 <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }} transition={{ delay: index * 0.05 }}
-                            className="flex items-start gap-6 p-8 bg-background-secondary border border-border rounded-xl">
+                            className="flex items-start gap-6 p-8 bg-background-secondary/50 border border-border/40 rounded-xl hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.12)] transition-all duration-300">
                   <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: `${industry.accentColor}15` }}>
                     <Check className="w-5 h-5" style={{ color: industry.accentColor }} />
                   </div>
@@ -617,8 +616,8 @@ export function IndustryPageClient({ industry, pricing, slug }: IndustryPageClie
 
         {/* PRICING */}
         {pricing && (
-          <section className="py-24 bg-background-secondary">
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <section className="py-28 bg-background-secondary">
+            <div className="max-w-4xl mx-auto px-6">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                           className="bg-background-primary border-2 rounded-3xl overflow-hidden" style={{ borderColor: industry.accentColor }}>
                 {pricing.isPopular && (
@@ -626,19 +625,19 @@ export function IndustryPageClient({ industry, pricing, slug }: IndustryPageClie
                     Most Popular Choice
                   </div>
                 )}
-                <div className="p-8 md:p-12 text-center border-b border-border">
+                <div className="p-10 md:p-12 text-center border-b border-border/50">
                   <h2 className="text-2xl md:text-3xl font-bold text-foreground-primary mb-4">{pricing.name}</h2>
-                  <div className="flex items-baseline justify-center gap-3">
+                  <div className="flex items-baseline justify-center gap-3 mb-4">
                     <span className="text-5xl md:text-6xl font-bold" style={{ color: industry.accentColor }}>
                       ${pricing.startingPrice.toLocaleString()}
                     </span>
                     <span className="text-foreground-tertiary text-lg">Starting from</span>
                   </div>
-                  <p className="text-foreground-secondary mt-4">
+                  <p className="text-foreground-secondary">
                     Complete website package with all essential features for {pricing.deliveryTime}
                   </p>
                 </div>
-                <div className="flex flex-wrap justify-center gap-6 p-6 bg-background-secondary/50 border-b border-border">
+                <div className="flex flex-wrap justify-center gap-6 p-6 bg-background-secondary/50 border-b border-border/50">
                   <div className="flex items-center gap-2 text-foreground-secondary">
                     <Clock className="w-5 h-5" style={{ color: industry.accentColor }} />
                     <span>{pricing.deliveryTime}</span>
@@ -656,7 +655,7 @@ export function IndustryPageClient({ industry, pricing, slug }: IndustryPageClie
                     <span>100% Satisfaction</span>
                   </div>
                 </div>
-                <div className="p-8 md:p-12">
+                <div className="p-10 md:p-12">
                   <ul className="space-y-4">
                     {pricing.features.map((feature: any) => (
                       <li key={feature.name || feature} className="flex items-center gap-3 text-foreground-secondary">
@@ -666,7 +665,7 @@ export function IndustryPageClient({ industry, pricing, slug }: IndustryPageClie
                     ))}
                   </ul>
                 </div>
-                <div className="p-8 border-t border-border bg-background-secondary/30">
+                <div className="p-8 border-t border-border/50 bg-background-secondary/30">
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Link href="/contact" className="flex-1">
                       <Button variant="primary" size="lg" className="w-full" style={{ backgroundColor: industry.accentColor }}>
@@ -684,10 +683,13 @@ export function IndustryPageClient({ industry, pricing, slug }: IndustryPageClie
         )}
 
         {/* SOCIAL PROOF */}
-        <section className="py-24 bg-background-primary">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-28 bg-background-primary">
+          <div className="max-w-5xl mx-auto px-6">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground-primary mb-4">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-medium tracking-wider uppercase mb-4">
+                Our Track Record
+              </span>
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground-primary mb-6">
                 Trusted by Businesses Across America
               </h2>
             </motion.div>
@@ -700,10 +702,10 @@ export function IndustryPageClient({ industry, pricing, slug }: IndustryPageClie
               ].map((stat, index) => (
                 <motion.div key={stat.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                            className="text-center p-6 bg-background-secondary border border-border rounded-2xl">
-                  <Award className="w-8 h-8 text-accent mx-auto mb-3" />
-                  <div className="text-3xl font-bold text-foreground-primary">{stat.value}</div>
-                  <div className="text-foreground-secondary text-sm">{stat.label}</div>
+                            className="text-center p-8 bg-background-secondary/50 border border-border/40 rounded-2xl hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.12)] transition-all duration-300">
+                  <Award className="w-8 h-8 text-accent mx-auto mb-4" />
+                  <div className="text-4xl font-bold text-foreground-primary mb-2">{stat.value}</div>
+                  <div className="text-foreground-secondary">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -714,20 +716,26 @@ export function IndustryPageClient({ industry, pricing, slug }: IndustryPageClie
         <FAQSection slug={slug} />
 
         {/* CTA SECTION */}
-        <section className="py-24 bg-background-primary">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <section className="py-28 bg-background-primary relative overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[180px]" />
+          </div>
+          <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground-primary mb-6">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-medium tracking-wider uppercase mb-6">
+                Get Started Today
+              </span>
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground-primary mb-6">
                 Ready to Dominate Your Market in {usCities.slice(0, 3).join(", ")} & Beyond?
               </h2>
-              <p className="text-foreground-secondary text-lg mb-8">
+              <p className="text-foreground-secondary text-lg mb-8 leading-relaxed">
                 Join 50+ businesses who have transformed their online presence with 911MAKERS.
                 <br />
                 <span className="text-accent font-semibold">
                   Starting from ${industry.startingPrice.toLocaleString()} - No hidden costs - 100% Satisfaction Guarantee
                 </span>
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-5 justify-center">
                 <Link href="/contact">
                   <Button variant="primary" size="lg">
                     Get Your Free Quote <ArrowRight className="w-5 h-5 ml-2" />

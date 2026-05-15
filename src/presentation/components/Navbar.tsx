@@ -34,11 +34,11 @@ export function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-background-primary/95 backdrop-blur-md border-b border-border"
+          ? "bg-background-primary/95 backdrop-blur-md border-b border-border/50"
           : "bg-transparent"
       )}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
@@ -48,7 +48,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-10">
+          <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -71,7 +71,7 @@ export function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-foreground-primary"
+            className="md:hidden p-2 text-foreground-primary hover:text-accent transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
@@ -90,14 +90,14 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background-secondary border-t border-border"
+            className="md:hidden bg-background-secondary/95 backdrop-blur-md border-t border-border/50"
           >
             <div className="px-6 py-8 space-y-5">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="block text-foreground-secondary hover:text-accent transition-colors py-2"
+                  className="block text-foreground-secondary hover:text-accent transition-colors py-3 text-lg font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}

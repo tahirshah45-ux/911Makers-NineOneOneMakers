@@ -26,30 +26,30 @@ export function IndustryGrid() {
   const industries = getAllIndustriesUseCase.execute();
 
   return (
-    <section className="py-24 bg-background-primary">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-28 bg-background-primary">
+      <div className="max-w-6xl mx-auto px-6">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
-          <span className="text-accent text-sm font-medium tracking-wider uppercase">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-medium tracking-wider uppercase mb-4">
             Industries We Serve
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-foreground-primary">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground-primary">
             Tailored Solutions for <span className="text-gradient">Every Business</span>
           </h2>
-          <p className="text-foreground-secondary max-w-2xl mx-auto">
+          <p className="text-foreground-secondary text-lg leading-relaxed max-w-2xl mx-auto">
             We specialize in creating digital solutions for specific industries,
             understanding unique challenges and opportunities.
           </p>
         </motion.div>
 
         {/* Industry Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {industries.map((industry, index) => {
             const Icon = iconMap[industry.icon] || Building2;
             return (
@@ -61,7 +61,7 @@ export function IndustryGrid() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Link href={`/industries/${industry.slug}`}>
-                  <div className="group relative bg-background-secondary border border-border rounded-2xl p-8 hover:border-accent hover:shadow-[0_0_30px_rgba(255,215,0,0.15)] transition-all duration-300 h-full">
+                  <div className="group relative bg-background-secondary/50 border border-border/40 rounded-2xl p-8 hover:border-accent/80 hover:shadow-[0_20px_40px_rgba(255,215,0,0.12)] hover:-translate-y-1 transition-all duration-300 h-full">
                     {/* Icon */}
                     <div
                       className={cn(
@@ -84,7 +84,7 @@ export function IndustryGrid() {
                     </p>
 
                     {/* Price Tag */}
-                    <div className="flex items-center justify-between pt-4 border-t border-border">
+                    <div className="flex items-center justify-between pt-4 border-t border-border/40">
                       <span className="text-foreground-tertiary text-sm">
                         Starting from
                       </span>

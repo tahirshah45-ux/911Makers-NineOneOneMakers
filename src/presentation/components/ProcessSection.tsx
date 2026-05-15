@@ -36,23 +36,23 @@ const steps = [
 
 export function ProcessSection() {
   return (
-    <section className="py-24 bg-background-primary">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-28 bg-background-primary">
+      <div className="max-w-6xl mx-auto px-6">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
-          <span className="text-accent text-sm font-medium tracking-wider uppercase">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-medium tracking-wider uppercase mb-4">
             Our Process
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-foreground-primary">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground-primary">
             How We <span className="text-gradient">Work</span>
           </h2>
-          <p className="text-foreground-secondary max-w-2xl mx-auto">
+          <p className="text-foreground-secondary text-lg leading-relaxed max-w-2xl mx-auto">
             A proven process that ensures every project succeeds. We keep things
             simple, transparent, and results-driven.
           </p>
@@ -74,7 +74,7 @@ export function ProcessSection() {
                 <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-border -z-10"></div>
               )}
 
-              <div className="bg-background-secondary border border-border rounded-2xl p-6 hover:border-accent hover:shadow-[0_0_20px_rgba(255,215,0,0.1)] transition-all duration-300">
+              <div className="bg-background-secondary/50 border border-border/40 rounded-2xl p-8 hover:border-accent/80 hover:shadow-[0_20px_40px_rgba(255,215,0,0.08)] hover:-translate-y-1 transition-all duration-300">
                 {/* Step Number */}
                 <span className="text-accent text-sm font-mono mb-4 block">
                   {step.number}
@@ -105,7 +105,7 @@ export function ProcessSection() {
           transition={{ delay: 0.4 }}
           className="text-center mt-16"
         >
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-accent/10 rounded-full text-accent">
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-accent/10 rounded-full text-accent hover:shadow-[0_8px_20px_rgba(255,215,0,0.1)] transition-shadow">
             <CheckCircle className="w-5 h-5" />
             <span className="font-medium">Ready to start? Let's talk!</span>
           </div>
