@@ -131,7 +131,7 @@ export default function GrowthAuditPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-background-secondary border border-border rounded-2xl p-6 text-center"
+                className="bg-background-secondary border border-border/60 rounded-2xl p-8 text-center"
               >
                 <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-accent/10 flex items-center justify-center">
                   <benefit.icon className="w-7 h-7 text-accent" />
@@ -168,7 +168,7 @@ export default function GrowthAuditPage() {
                   </label>
                   <input
                     {...register("name")}
-                    className="w-full px-4 py-3 bg-background-secondary border border-border rounded-lg text-foreground-primary focus:outline-none focus:border-accent transition-colors"
+                    className="w-full px-5 py-4 bg-background-secondary border border-border rounded-xl text-foreground-primary focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30 transition-all duration-300"
                     placeholder="Your name"
                   />
                   {errors.name && (
@@ -184,7 +184,7 @@ export default function GrowthAuditPage() {
                   <input
                     {...register("email")}
                     type="email"
-                    className="w-full px-4 py-3 bg-background-secondary border border-border rounded-lg text-foreground-primary focus:outline-none focus:border-accent transition-colors"
+                    className="w-full px-5 py-4 bg-background-secondary border border-border rounded-xl text-foreground-primary focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30 transition-all duration-300"
                     placeholder="your@email.com"
                   />
                   {errors.email && (
@@ -203,7 +203,7 @@ export default function GrowthAuditPage() {
                   <input
                     {...register("phone")}
                     type="tel"
-                    className="w-full px-4 py-3 bg-background-secondary border border-border rounded-lg text-foreground-primary focus:outline-none focus:border-accent transition-colors"
+                    className="w-full px-5 py-4 bg-background-secondary border border-border rounded-xl text-foreground-primary focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30 transition-all duration-300"
                     placeholder="+1 (555) 000-0000"
                   />
                   {errors.phone && (
@@ -218,7 +218,7 @@ export default function GrowthAuditPage() {
                   </label>
                   <input
                     {...register("website")}
-                    className="w-full px-4 py-3 bg-background-secondary border border-border rounded-lg text-foreground-primary focus:outline-none focus:border-accent transition-colors"
+                    className="w-full px-5 py-4 bg-background-secondary border border-border rounded-xl text-foreground-primary focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30 transition-all duration-300"
                     placeholder="www.yourwebsite.com"
                   />
                 </div>
@@ -230,7 +230,7 @@ export default function GrowthAuditPage() {
                 </label>
                 <select
                   {...register("industry")}
-                  className="w-full px-4 py-3 bg-background-secondary border border-border rounded-lg text-foreground-primary focus:outline-none focus:border-accent transition-colors"
+                  className="w-full px-5 py-4 bg-background-secondary border border-border rounded-xl text-foreground-primary focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30 transition-all duration-300"
                 >
                   <option value="">Select your industry</option>
                   {industries.map((ind) => (

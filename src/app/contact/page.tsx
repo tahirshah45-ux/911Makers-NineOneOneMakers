@@ -131,13 +131,13 @@ export default function ContactPage() {
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <label className="block text-foreground-primary text-sm font-medium mb-2">
+                    <label className="block text-foreground-primary text-sm font-medium mb-3">
                       Name *
                     </label>
                     <input
                       {...register("name")}
                       className={cn(
-                        "w-full px-4 py-3 bg-background-primary border rounded-lg text-foreground-primary focus:outline-none focus:border-accent transition-colors",
+                        "w-full px-5 py-4 bg-background-primary border border-border rounded-xl text-foreground-primary focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30 transition-all duration-300",
                         errors.name ? "border-red-500" : "border-border"
                       )}
                       placeholder="Your name"
@@ -149,14 +149,14 @@ export default function ContactPage() {
                     )}
                   </div>
                   <div>
-                    <label className="block text-foreground-primary text-sm font-medium mb-2">
+                    <label className="block text-foreground-primary text-sm font-medium mb-3">
                       Email *
                     </label>
                     <input
                       {...register("email")}
                       type="email"
                       className={cn(
-                        "w-full px-4 py-3 bg-background-primary border rounded-lg text-foreground-primary focus:outline-none focus:border-accent transition-colors",
+                        "w-full px-5 py-4 bg-background-primary border border-border rounded-xl text-foreground-primary focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30 transition-all duration-300",
                         errors.email ? "border-red-500" : "border-border"
                       )}
                       placeholder="your@email.com"
@@ -171,14 +171,14 @@ export default function ContactPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-foreground-primary text-sm font-medium mb-2">
+                    <label className="block text-foreground-primary text-sm font-medium mb-3">
                       Phone *
                     </label>
                     <input
                       {...register("phone")}
                       type="tel"
                       className={cn(
-                        "w-full px-4 py-3 bg-background-primary border rounded-lg text-foreground-primary focus:outline-none focus:border-accent transition-colors",
+                        "w-full px-5 py-4 bg-background-primary border border-border rounded-xl text-foreground-primary focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/30 transition-all duration-300",
                         errors.phone ? "border-red-500" : "border-border"
                       )}
                       placeholder="+1 (555) 000-0000"
@@ -190,7 +190,7 @@ export default function ContactPage() {
                     )}
                   </div>
                   <div>
-                    <label className="block text-foreground-primary text-sm font-medium mb-2">
+                    <label className="block text-foreground-primary text-sm font-medium mb-3">
                       Company
                     </label>
                     <input
@@ -203,7 +203,7 @@ export default function ContactPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-foreground-primary text-sm font-medium mb-2">
+                    <label className="block text-foreground-primary text-sm font-medium mb-3">
                       Industry
                     </label>
                     <select
@@ -219,7 +219,7 @@ export default function ContactPage() {
                     </select>
                   </div>
                   <div>
-                    <label className="block text-foreground-primary text-sm font-medium mb-2">
+                    <label className="block text-foreground-primary text-sm font-medium mb-3">
                       Budget Range
                     </label>
                     <select
@@ -237,7 +237,7 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label className="block text-foreground-primary text-sm font-medium mb-2">
+                  <label className="block text-foreground-primary text-sm font-medium mb-3">
                     Message *
                   </label>
                   <textarea
@@ -276,7 +276,7 @@ export default function ContactPage() {
               viewport={{ once: true }}
               className="space-y-8"
             >
-              <div className="bg-background-primary border border-border rounded-2xl p-8">
+              <div className="bg-background-primary border border-border/60 rounded-2xl p-10 shadow-lg shadow-black/20">
                 <h3 className="text-xl font-semibold text-foreground-primary mb-6">
                   Get in Touch
                 </h3>

@@ -68,7 +68,7 @@ export default function AboutPage() {
           </motion.div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -78,13 +78,13 @@ export default function AboutPage() {
                 transition={{ delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-accent/10 flex items-center justify-center">
-                  <stat.icon className="w-8 h-8 text-accent" />
+                <div className="w-18 h-18 mx-auto mb-5 rounded-2xl bg-accent/10 flex items-center justify-center">
+                  <stat.icon className="w-9 h-9 text-accent" />
                 </div>
-                <div className="text-3xl font-bold text-foreground-primary">
+                <div className="text-4xl font-bold text-foreground-primary">
                   {stat.value}
                 </div>
-                <div className="text-foreground-secondary text-sm">
+                <div className="text-foreground-secondary text-base mt-2">
                   {stat.label}
                 </div>
               </motion.div>

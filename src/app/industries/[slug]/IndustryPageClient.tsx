@@ -566,7 +566,7 @@ export function IndustryPageClient({ industry, pricing, slug }: IndustryPageClie
               {content.benefits.map((item, index) => (
                 <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                            className="bg-background-primary border border-border rounded-2xl p-8 text-center hover:border-accent transition-colors">
+                            className="bg-background-primary border border-border/60 rounded-2xl p-8 text-center hover:border-accent/80 hover:shadow-[0_8px_30px_rgba(255,215,0,0.06)] hover:-translate-y-1 transition-all duration-300">
                   <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-6">
                     <span style={{ color: industry.accentColor }}><item.icon className="w-8 h-8" /></span>
                   </div>

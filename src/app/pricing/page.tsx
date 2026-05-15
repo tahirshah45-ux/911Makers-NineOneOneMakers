@@ -36,7 +36,7 @@ export default function PricingPage() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <span className="text-accent text-sm font-medium tracking-wider uppercase">Pricing</span>
+            <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-medium tracking-wider uppercase">Pricing</span>
             <h1 className="text-5xl md:text-6xl font-bold mt-6 mb-8 text-foreground-primary">
               Industry-Specific <span className="text-gradient">Packages</span>
             </h1>
@@ -54,22 +54,22 @@ export default function PricingPage() {
             {pricing.map((item, index) => (
               <motion.div key={item.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
                           viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                          className="bg-background-primary border border-border rounded-2xl p-8 hover:border-accent hover:shadow-[0_0_30px_rgba(255,215,0,0.15)] transition-all duration-300">
-                <div className="mb-6">
-                  <h3 className="text-xl font-semibold text-foreground-primary mb-2">{item.name}</h3>
-                  <p className="text-foreground-secondary text-sm">
+                          className="bg-background-primary border border-border/60 rounded-2xl p-10 hover:border-accent/80 hover:shadow-[0_12px_50px_rgba(255,215,0,0.08)] hover:-translate-y-1 transition-all duration-300">
+                <div className="mb-8">
+                  <h3 className="text-2xl font-semibold text-foreground-primary mb-3">{item.name}</h3>
+                  <p className="text-foreground-secondary">
                     {industryTypeMap[item.industryType] || item.industryType} Industry
                   </p>
                 </div>
-                <div className="mb-6">
-                  <span className="text-4xl font-bold text-accent">${item.startingPrice.toLocaleString()}</span>
-                  <span className="text-foreground-tertiary ml-2">Starting from</span>
+                <div className="mb-8">
+                  <span className="text-5xl font-bold text-accent">${item.startingPrice.toLocaleString()}</span>
+                  <span className="text-foreground-tertiary ml-3 text-base">Starting from</span>
                 </div>
-                <div className="flex gap-4 mb-6 text-sm">
+                <div className="flex gap-6 mb-8 text-base">
                   <div className="text-foreground-secondary"><span className="text-foreground-tertiary">Delivery:</span> {item.deliveryTime}</div>
                   <div className="text-foreground-secondary"><span className="text-foreground-tertiary">Revisions:</span> {item.revisions}</div>
                 </div>
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-4 mb-10">
                   {item.features.map((feature: any) => (
                     <li key={feature.name || feature} className="flex items-start gap-3 text-foreground-secondary text-sm">
                       <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />

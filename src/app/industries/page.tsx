@@ -41,7 +41,7 @@ export default function IndustriesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-accent text-sm font-medium tracking-wider uppercase">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-medium tracking-wider uppercase">
               Industries
             </span>
             <h1 className="text-5xl md:text-6xl font-bold mt-6 mb-8 text-foreground-primary">
@@ -71,30 +71,30 @@ export default function IndustriesPage() {
                   transition={{ delay: index * 0.1 }}
                 >
                   <Link href={`/industries/${industry.slug}`}>
-                    <div className="group bg-background-primary border border-border rounded-2xl p-8 hover:border-accent hover:shadow-[0_0_30px_rgba(255,215,0,0.15)] transition-all duration-300 h-full">
+                    <div className="group bg-background-primary border border-border/60 rounded-2xl p-10 hover:border-accent/80 hover:shadow-[0_12px_50px_rgba(255,215,0,0.08)] hover:-translate-y-1 transition-all duration-300 h-full">
                       {/* Icon */}
                       <div
                         className={cn(
-                          "w-16 h-16 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110",
+                          "w-18 h-18 rounded-2xl flex items-center justify-center mb-7 transition-transform duration-300 group-hover:scale-105",
                           "bg-accent/10"
                         )}
                         style={{ backgroundColor: `${industry.accentColor}15` }}
                       >
                         <span style={{ color: industry.accentColor }}>
-                          <Icon className="w-8 h-8" />
+                          <Icon className="w-9 h-9" />
                         </span>
                       </div>
 
                       {/* Content */}
-                      <h3 className="text-xl font-semibold text-foreground-primary mb-3 group-hover:text-accent transition-colors">
+                      <h3 className="text-2xl font-semibold text-foreground-primary mb-4 group-hover:text-accent transition-colors">
                         {industry.displayName}
                       </h3>
-                      <p className="text-foreground-secondary text-sm mb-6 line-clamp-2">
+                      <p className="text-foreground-secondary text-base mb-8 line-clamp-2 leading-relaxed">
                         {industry.description}
                       </p>
 
                       {/* Features */}
-                      <ul className="space-y-2 mb-6">
+                      <ul className="space-y-3 mb-8">
                         {industry.features.slice(0, 3).map((feature: any) => (
                           <li
                             key={feature.name || feature}

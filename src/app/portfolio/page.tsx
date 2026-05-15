@@ -98,7 +98,7 @@ export default function PortfolioPage() {
       {/* Projects Grid */}
       <section className="py-24 bg-background-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {projects.map((project, index) => (
               <motion.div
                 key={project.id}
@@ -108,7 +108,7 @@ export default function PortfolioPage() {
                 transition={{ delay: index * 0.1 }}
               >
                 <Link href={project.link}>
-                  <div className="group bg-background-primary border border-border rounded-2xl overflow-hidden hover:border-accent hover:shadow-[0_0_30px_rgba(255,215,0,0.15)] transition-all duration-300 h-full">
+                  <div className="group bg-background-primary border border-border/60 rounded-2xl overflow-hidden hover:border-accent/80 hover:shadow-[0_12px_40px_rgba(255,215,0,0.1)] hover:-translate-y-1 transition-all duration-300 h-full">
                     {/* Image Placeholder */}
                     <div
                       className="h-48 relative overflow-hidden"
@@ -128,17 +128,17 @@ export default function PortfolioPage() {
                     </div>
 
                     {/* Content */}
-                    <div className="p-6">
+                    <div className="p-8">
                       <span
                         className="text-sm font-medium"
                         style={{ color: project.color }}
                       >
                         {project.industry}
                       </span>
-                      <h3 className="text-xl font-semibold text-foreground-primary mt-2 mb-3">
+                      <h3 className="text-xl font-semibold text-foreground-primary mt-3 mb-4">
                         {project.title}
                       </h3>
-                      <p className="text-foreground-secondary text-sm">
+                      <p className="text-foreground-secondary text-base leading-relaxed">
                         {project.description}
                       </p>
                     </div>

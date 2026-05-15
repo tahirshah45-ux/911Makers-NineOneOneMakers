@@ -48,7 +48,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-10">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -92,7 +92,7 @@ export function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-background-secondary border-t border-border"
           >
-            <div className="px-4 py-6 space-y-4">
+            <div className="px-6 py-8 space-y-5">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}

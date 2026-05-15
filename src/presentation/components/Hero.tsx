@@ -53,13 +53,13 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-accent/20 to-accent/10 border border-accent/40 mb-8 mx-auto"
+          className="inline-flex items-center gap-4 px-7 py-3.5 rounded-full bg-gradient-to-r from-accent/20 to-accent/10 border border-accent/40 mb-10 mx-auto"
         >
-          <Globe className="w-5 h-5 text-accent" />
-          <span className="text-foreground-primary text-sm font-medium">
+          <Globe className="w-5 h-5 text-accent flex-shrink-0" />
+          <span className="text-foreground-primary text-sm font-medium whitespace-nowrap">
             Pakistan-Based Team | <span className="text-accent font-semibold">Proven Results for American Small Businesses</span>
           </span>
-          <Handshake className="w-5 h-5 text-accent" />
+          <Handshake className="w-5 h-5 text-accent flex-shrink-0" />
         </motion.div>
 
         {/* Main Heading - SEO Optimized, USA-Focused */}
@@ -87,7 +87,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="text-lg md:text-xl text-foreground-secondary max-w-4xl mx-auto mb-8 text-center leading-relaxed"
+          className="text-lg md:text-xl text-foreground-secondary max-w-3xl mx-auto mb-10 text-center leading-relaxed"
         >
           We help small business owners across{" "}
           <span className="text-accent font-semibold">New York, Los Angeles, Houston, Chicago, Miami, Dallas, Atlanta, Phoenix, and all 50 states</span>{" "}
@@ -114,7 +114,7 @@ export function Hero() {
           {benefits.map((benefit) => (
             <div
               key={benefit}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-background-secondary/50 border border-border"
+              className="flex items-center gap-3 px-5 py-2.5 rounded-lg bg-background-secondary/50 border border-border"
             >
               <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
               <span className="text-foreground-secondary text-sm font-medium">
@@ -129,7 +129,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.45 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
+          className="flex flex-col sm:flex-row gap-5 justify-center mb-16"
         >
           <Link href="/growth-audit">
             <Button variant="primary" size="lg" className="group">
@@ -178,7 +178,7 @@ export function Hero() {
             {citiesWeServe.map((city) => (
               <span
                 key={city}
-                className="px-3 py-1 bg-background-secondary/50 border border-border rounded-full text-xs text-foreground-secondary"
+                className="px-3.5 py-1.5 bg-background-secondary/50 border border-border rounded-full text-xs text-foreground-secondary"
               >
                 {city}
               </span>
@@ -206,7 +206,7 @@ export function Hero() {
           transition={{ delay: 0.7 }}
           className="flex justify-center"
         >
-          <div className="flex items-center gap-3 px-6 py-4 bg-background-secondary/70 border-2 border-accent/40 rounded-2xl">
+          <div className="flex items-center gap-4 px-8 py-5 bg-background-secondary/70 border-2 border-accent/40 rounded-2xl">
             <div className="flex flex-col items-center">
               <Flag className="w-6 h-6 text-accent" />
               <span className="text-foreground-tertiary text-xs mt-1">Pakistan</span>

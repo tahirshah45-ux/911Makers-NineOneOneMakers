@@ -33,7 +33,7 @@ const footerLinks = {
 export function Footer() {
   return (
     <footer className="bg-background-secondary border-t border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-16">
           {/* Brand Column */}
           <div className="lg:col-span-2">
@@ -73,7 +73,7 @@ export function Footer() {
           {/* Services */}
           <div>
             <h4 className="text-foreground-primary font-semibold mb-4">Services</h4>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {footerLinks.services.map((link) => (
                 <li key={link.label}>
                   <Link
@@ -90,7 +90,7 @@ export function Footer() {
           {/* Industries */}
           <div>
             <h4 className="text-foreground-primary font-semibold mb-4">Industries</h4>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {footerLinks.industries.map((link) => (
                 <li key={link.label}>
                   <Link
@@ -107,7 +107,7 @@ export function Footer() {
           {/* Company */}
           <div>
             <h4 className="text-foreground-primary font-semibold mb-4">Company</h4>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
                   <Link
