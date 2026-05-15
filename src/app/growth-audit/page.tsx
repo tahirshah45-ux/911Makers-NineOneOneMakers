@@ -69,7 +69,7 @@ export default function GrowthAuditPage() {
 
   if (isSuccess) {
     return (
-      <div className="pt-20 min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -95,7 +95,7 @@ export default function GrowthAuditPage() {
   }
 
   return (
-    <div className="pt-20">
+    <div>
       {/* Hero Section */}
       <section className="py-24 bg-background-primary relative overflow-hidden">
         <div className="absolute inset-0">

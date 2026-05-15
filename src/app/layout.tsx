@@ -89,7 +89,9 @@ export default function RootLayout({
     <html lang="en" className={`${dmSans.variable} ${playfair.variable}`}>
       <body className="font-sans bg-background-primary text-foreground-primary antialiased">
         <Navbar />
-        <main>{children}</main>
+        <main className="pt-20 min-h-screen">
+          {children}
+        </main>
         <Footer />
         <WhatsAppButton />
       </body>

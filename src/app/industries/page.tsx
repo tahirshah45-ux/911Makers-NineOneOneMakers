@@ -28,7 +28,7 @@ export default function IndustriesPage() {
   const industries = getAllIndustriesUseCase.execute();
 
   return (
-    <div className="pt-20">
+    <div>
       {/* Hero Section */}
       <section className="py-24 bg-background-primary relative overflow-hidden">
         <div className="absolute inset-0">

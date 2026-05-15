@@ -41,7 +41,7 @@ const values = [
 
 export default function AboutPage() {
   return (
-    <div className="pt-20">
+    <div>
       {/* Hero Section */}
       <section className="py-24 bg-background-primary relative overflow-hidden">
         <div className="absolute inset-0">

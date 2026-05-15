@@ -425,7 +425,7 @@ function FAQSection({ slug }: { slug: string }) {
 export function IndustryPageClient({ industry, pricing, slug }: IndustryPageClientProps) {
   if (!industry) {
     return (
-      <div className="pt-20 min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-foreground-primary mb-4">Industry Not Found</h1>
           <Link href="/industries">
@@ -456,7 +456,7 @@ export function IndustryPageClient({ industry, pricing, slug }: IndustryPageClie
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(content.jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <div className="pt-20">
+      <div>
         {/* HERO SECTION */}
         <section className="py-24 bg-background-primary relative overflow-hidden">
           <div className="absolute inset-0">
