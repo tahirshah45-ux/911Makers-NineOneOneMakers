@@ -29,56 +29,84 @@ export default function PricingPage() {
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="py-24 bg-background-primary relative overflow-hidden">
+      {/* Hero */}
+      <section className="py-28 bg-background-primary relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-[120px]"></div>
+          <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-accent/8 rounded-full blur-[150px]" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-medium tracking-wider uppercase">Pricing</span>
-            <h1 className="text-5xl md:text-6xl font-bold mt-6 mb-8 text-foreground-primary">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-medium tracking-wider uppercase mb-6">
+              Pricing
+            </span>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground-primary">
               Industry-Specific <span className="text-gradient">Packages</span>
             </h1>
-            <p className="text-foreground-secondary max-w-2xl mx-auto text-lg">
-              Transparent pricing with no hidden costs. All packages include professional design, development, and ongoing support.
+            <p className="text-xl text-foreground-secondary leading-relaxed">
+              Transparent pricing with no hidden costs. Everything you need included.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Pricing Cards */}
-      <section className="py-24 bg-background-secondary">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-28 bg-background-secondary">
+        <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {pricing.map((item, index) => (
-              <motion.div key={item.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                          className="bg-background-primary border border-border/60 rounded-2xl p-10 hover:border-accent/80 hover:shadow-[0_12px_50px_rgba(255,215,0,0.08)] hover:-translate-y-1 transition-all duration-300">
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="p-10 rounded-2xl bg-background-primary/50 border border-border/40 hover:border-accent/50 hover:shadow-[0_20px_60px_rgba(0,0,0,0.3)] transition-all duration-500 hover:-translate-y-2"
+              >
+                {/* Header */}
                 <div className="mb-8">
-                  <h3 className="text-2xl font-semibold text-foreground-primary mb-3">{item.name}</h3>
+                  <h3 className="text-2xl font-semibold text-foreground-primary mb-2">
+                    {item.name}
+                  </h3>
                   <p className="text-foreground-secondary">
-                    {industryTypeMap[item.industryType] || item.industryType} Industry
+                    {industryTypeMap[item.industryType]} Industry
                   </p>
                 </div>
+
+                {/* Price */}
                 <div className="mb-8">
-                  <span className="text-5xl font-bold text-accent">${item.startingPrice.toLocaleString()}</span>
-                  <span className="text-foreground-tertiary ml-3 text-base">Starting from</span>
+                  <span className="text-5xl font-bold text-accent">
+                    ${item.startingPrice.toLocaleString()}
+                  </span>
+                  <span className="text-foreground-tertiary ml-2">starting</span>
                 </div>
-                <div className="flex gap-6 mb-8 text-base">
-                  <div className="text-foreground-secondary"><span className="text-foreground-tertiary">Delivery:</span> {item.deliveryTime}</div>
-                  <div className="text-foreground-secondary"><span className="text-foreground-tertiary">Revisions:</span> {item.revisions}</div>
+
+                {/* Meta */}
+                <div className="flex gap-6 mb-8 text-sm">
+                  <div className="text-foreground-secondary">
+                    <span className="text-foreground-tertiary">Delivery: </span>
+                    {item.deliveryTime}
+                  </div>
+                  <div className="text-foreground-secondary">
+                    <span className="text-foreground-tertiary">Revisions: </span>
+                    {item.revisions}
+                  </div>
                 </div>
+
+                {/* Features */}
                 <ul className="space-y-4 mb-10">
                   {item.features.map((feature: any) => (
-                    <li key={feature.name || feature} className="flex items-start gap-3 text-foreground-secondary text-sm">
+                    <li key={feature.name || feature} className="flex items-start gap-3 text-foreground-secondary">
                       <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                      {feature.name || feature}
+                      <span className="text-sm">{feature.name || feature}</span>
                     </li>
                   ))}
                 </ul>
+
+                {/* CTA */}
                 <Link href={`/industries/${industrySlugMap[item.industryType] || item.industryType}`}>
-                  <Button variant="secondary" className="w-full">View Details <ArrowRight className="w-4 h-4 ml-2" /></Button>
+                  <Button variant="secondary" className="w-full">
+                    View Details <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
                 </Link>
               </motion.div>
             ))}
@@ -87,14 +115,18 @@ export default function PricingPage() {
       </section>
 
       {/* Note Section */}
-      <section className="py-16 bg-background-primary">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-background-secondary border border-border rounded-2xl p-8">
-            <h3 className="text-xl font-semibold text-foreground-primary mb-4">Custom Solutions Available</h3>
-            <p className="text-foreground-secondary mb-6">
-              Every business is unique. We offer custom packages tailored to your specific needs.
+      <section className="py-28 bg-background-primary">
+        <div className="max-w-2xl mx-auto px-6 text-center">
+          <div className="p-12 rounded-2xl bg-background-secondary/50 border border-border/40">
+            <h3 className="text-2xl font-semibold text-foreground-primary mb-4">
+              Custom Solutions Available
+            </h3>
+            <p className="text-foreground-secondary mb-8">
+              Every business is unique. We offer custom packages for specific needs.
             </p>
-            <Link href="/contact"><Button variant="primary">Get Custom Quote</Button></Link>
+            <Button variant="primary">
+              Get Custom Quote
+            </Button>
           </div>
         </div>
       </section>
