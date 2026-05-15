@@ -46,7 +46,7 @@ export default function ServicesPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="text-accent text-sm font-medium tracking-wider uppercase">Our Services</span>
-            <h1 className="text-5xl md:text-6xl font-bold mt-4 mb-6 text-foreground-primary">
+            <h1 className="text-5xl md:text-6xl font-bold mt-6 mb-8 text-foreground-primary">
               Complete <span className="text-gradient">Digital Solutions</span>
             </h1>
             <p className="text-foreground-secondary max-w-2xl mx-auto text-lg">

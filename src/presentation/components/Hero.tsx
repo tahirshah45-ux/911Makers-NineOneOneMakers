@@ -31,7 +31,7 @@ const topStates = ["California", "Texas", "New York", "Florida", "Illinois", "Pe
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-16">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-16 md:py-20">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background-primary/50 to-background-primary"></div>
       <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-accent/10 rounded-full blur-[150px]"></div>
@@ -67,7 +67,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 text-center leading-tight"
+          className="text-4xl md:text-5xl lg:text-7xl font-bold mb-8 text-center leading-tight"
         >
           <span className="text-foreground-primary">
             Stop Losing Clients to
@@ -87,7 +87,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="text-lg md:text-xl text-foreground-secondary max-w-4xl mx-auto mb-6 text-center leading-relaxed"
+          className="text-lg md:text-xl text-foreground-secondary max-w-4xl mx-auto mb-8 text-center leading-relaxed"
         >
           We help small business owners across{" "}
           <span className="text-accent font-semibold">New York, Los Angeles, Houston, Chicago, Miami, Dallas, Atlanta, Phoenix, and all 50 states</span>{" "}
@@ -99,7 +99,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.35 }}
-          className="text-center text-foreground-primary font-medium mb-8"
+          className="text-center text-foreground-primary font-medium mb-10"
         >
           Premium branding + professional website design + ongoing growth support = <span className="text-accent">More leads, more sales, more revenue.</span>
         </motion.p>
@@ -109,7 +109,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="flex flex-wrap justify-center gap-3 mb-10"
+          className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {benefits.map((benefit) => (
             <div
@@ -129,7 +129,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.45 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+          className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
         >
           <Link href="/growth-audit">
             <Button variant="primary" size="lg" className="group">
@@ -149,7 +149,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="flex flex-wrap justify-center gap-8 mb-8"
+          className="flex flex-wrap justify-center gap-8 md:gap-12 mb-12"
         >
           {trustStats.map((stat) => (
             <div key={stat.label} className="text-center">

@@ -152,3 +152,28 @@ a {
 .stagger-4 { animation-delay: 400ms; }
 .stagger-5 { animation-delay: 500ms; }
 .stagger-6 { animation-delay: 600ms; }
+
+/* Improved Typography Spacing */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+p {
+  line-height: 1.7;
+}
+
+/* Better section content spacing */
+.section-content > * + * {
+  margin-top: 1.5rem;
+}
+
+/* Improved form elements spacing */
+input, textarea, select {
+  line-height: 1.5;
+}
+
+/* Better button padding for premium feel */
+button, .btn {
+  letter-spacing: 0.02em;
+}

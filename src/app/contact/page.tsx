@@ -107,7 +107,7 @@ export default function ContactPage() {
             <span className="text-accent text-sm font-medium tracking-wider uppercase">
               Contact Us
             </span>
-            <h1 className="text-5xl md:text-6xl font-bold mt-4 mb-6 text-foreground-primary">
+            <h1 className="text-5xl md:text-6xl font-bold mt-6 mb-8 text-foreground-primary">
               Let's <span className="text-gradient">Connect</span>
             </h1>
             <p className="text-foreground-secondary max-w-2xl mx-auto text-lg">
@@ -128,8 +128,8 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
                     <label className="block text-foreground-primary text-sm font-medium mb-2">
                       Name *

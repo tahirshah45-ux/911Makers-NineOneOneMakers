@@ -112,7 +112,7 @@ export default function GrowthAuditPage() {
             <span className="inline-block px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-6">
               FREE
             </span>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground-primary">
+            <h1 className="text-5xl md:text-6xl font-bold mb-8 text-foreground-primary">
               Free <span className="text-gradient">Growth Audit</span>
             </h1>
             <p className="text-foreground-secondary max-w-2xl mx-auto text-lg">
@@ -160,8 +160,8 @@ export default function GrowthAuditPage() {
             <h2 className="text-2xl font-bold text-foreground-primary mb-6 text-center">
               Get Your Free Audit
             </h2>
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                   <label className="block text-foreground-primary text-sm font-medium mb-2">
                     Name *

@@ -44,7 +44,7 @@ export default function IndustriesPage() {
             <span className="text-accent text-sm font-medium tracking-wider uppercase">
               Industries
             </span>
-            <h1 className="text-5xl md:text-6xl font-bold mt-4 mb-6 text-foreground-primary">
+            <h1 className="text-5xl md:text-6xl font-bold mt-6 mb-8 text-foreground-primary">
               Tailored for <span className="text-gradient">Your Industry</span>
             </h1>
             <p className="text-foreground-secondary max-w-2xl mx-auto text-lg">

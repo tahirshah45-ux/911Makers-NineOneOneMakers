@@ -367,7 +367,7 @@ function FAQSection({ slug }: { slug: string }) {
   };
 
   return (
-    <section className="py-20 bg-background-secondary">
+    <section className="py-24 bg-background-secondary">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -467,7 +467,7 @@ export function IndustryPageClient({ industry, pricing, slug }: IndustryPageClie
               <span className="inline-block px-4 py-2 rounded-full text-sm font-medium mb-6" style={{ backgroundColor: `${industry.accentColor}15`, color: industry.accentColor }}>
                 {content.heroBadge}
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground-primary leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-foreground-primary leading-tight">
                 {content.heroTitle[0]}
                 <br />
                 <span className="text-gradient">{content.heroTitle[1]}</span>
@@ -510,7 +510,7 @@ export function IndustryPageClient({ industry, pricing, slug }: IndustryPageClie
         </section>
 
         {/* PROBLEMS */}
-        <section className="py-20 bg-background-primary">
+        <section className="py-24 bg-background-primary">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
               <span className="text-accent text-sm font-medium tracking-wider uppercase">
@@ -548,7 +548,7 @@ export function IndustryPageClient({ industry, pricing, slug }: IndustryPageClie
         </section>
 
         {/* OUR SOLUTION / BENEFITS */}
-        <section className="py-20 bg-background-secondary">
+        <section className="py-24 bg-background-secondary">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
               <span className="text-accent text-sm font-medium tracking-wider uppercase">
@@ -562,16 +562,16 @@ export function IndustryPageClient({ industry, pricing, slug }: IndustryPageClie
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {content.benefits.map((item, index) => (
                 <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                            className="bg-background-primary border border-border rounded-2xl p-6 text-center hover:border-accent transition-colors">
-                  <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-4">
-                    <span style={{ color: industry.accentColor }}><item.icon className="w-7 h-7" /></span>
+                            className="bg-background-primary border border-border rounded-2xl p-8 text-center hover:border-accent transition-colors">
+                  <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-6">
+                    <span style={{ color: industry.accentColor }}><item.icon className="w-8 h-8" /></span>
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground-primary mb-2">{item.title}</h3>
-                  <p className="text-foreground-secondary text-sm mb-4">{item.desc}</p>
+                  <h3 className="text-lg font-semibold text-foreground-primary mb-3">{item.title}</h3>
+                  <p className="text-foreground-secondary text-sm mb-6">{item.desc}</p>
                   <div className="px-3 py-2 bg-accent/10 rounded-lg">
                     <span className="text-accent font-bold text-sm">{item.metric}</span>
                   </div>
@@ -596,11 +596,11 @@ export function IndustryPageClient({ industry, pricing, slug }: IndustryPageClie
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {content.features.map((feature, index) => (
                 <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }} transition={{ delay: index * 0.05 }}
-                            className="flex items-start gap-5 p-6 bg-background-secondary border border-border rounded-xl">
+                            className="flex items-start gap-6 p-8 bg-background-secondary border border-border rounded-xl">
                   <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: `${industry.accentColor}15` }}>
                     <Check className="w-5 h-5" style={{ color: industry.accentColor }} />
                   </div>
@@ -684,14 +684,14 @@ export function IndustryPageClient({ industry, pricing, slug }: IndustryPageClie
         )}
 
         {/* SOCIAL PROOF */}
-        <section className="py-20 bg-background-primary">
+        <section className="py-24 bg-background-primary">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
               <h2 className="text-3xl font-bold text-foreground-primary mb-4">
                 Trusted by Businesses Across America
               </h2>
             </motion.div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
                 { value: "50+", label: "Businesses Served" },
                 { value: "98%", label: "Client Satisfaction" },

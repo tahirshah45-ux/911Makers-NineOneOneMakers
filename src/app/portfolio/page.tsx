@@ -84,7 +84,7 @@ export default function PortfolioPage() {
             <span className="text-accent text-sm font-medium tracking-wider uppercase">
               Our Work
             </span>
-            <h1 className="text-5xl md:text-6xl font-bold mt-4 mb-6 text-foreground-primary">
+            <h1 className="text-5xl md:text-6xl font-bold mt-6 mb-8 text-foreground-primary">
               Portfolio of <span className="text-gradient">Excellence</span>
             </h1>
             <p className="text-foreground-secondary max-w-2xl mx-auto text-lg">
